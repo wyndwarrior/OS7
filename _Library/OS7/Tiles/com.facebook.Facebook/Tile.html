@@ -1,0 +1,45 @@
+<html>
+<head>
+<meta name="viewport" content="width=115, user-scalable=no" />
+<style>
+.fade{
+	-webkit-animation-name: fade_animation;
+	-webkit-animation-duration: 20s;
+	-webkit-animation-iteration-count: infinite;
+	width:	38px;
+	height: 38px;
+	opacity:0;
+}
+
+@-webkit-keyframes fade_animation {
+	0% {
+		opacity:0;
+	}
+	25% {
+		opacity:1;
+	}
+	50% {
+		opacity:1;
+	}
+	75% {
+		opacity:0;
+	}
+	100% {
+		opacity:0;
+	}
+}
+</style>
+<script>
+window.onload = onLoad;
+
+function onLoad(){
+	for(var i = 0; i<9; i++){
+		document.getElementById("holder").innerHTML += "<img class='fade' src='" + i + ".png' style = 'position:absolute;top:" + ((i%3)*39) + "px;left:" + ((i/3)*39-(i%3)*13) + "px;z-index:" + i + ";-webkit-animation-delay:" + (Math.random()*20) +"s;' />";
+	}
+}
+</script>
+</head>
+<body>
+<div id="holder"></div>
+</body>
+</html>
