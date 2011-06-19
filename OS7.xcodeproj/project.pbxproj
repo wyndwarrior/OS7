@@ -1,0 +1,110 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXFileReference section */
+		80DB366413AAF80300605710 /* OS7ListApp.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OS7ListApp.h; sourceTree = "<group>"; };
+		80DB366513AAF80300605710 /* OS7ListApp.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OS7ListApp.m; sourceTree = "<group>"; };
+		80DB366613AAF80300605710 /* DreamBoard.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DreamBoard.h; sourceTree = "<group>"; };
+		80DB366713AAF80300605710 /* OS7.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OS7.h; sourceTree = "<group>"; };
+		80DB366813AAF80300605710 /* OS7.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OS7.m; sourceTree = "<group>"; };
+		80DB366913AAF80300605710 /* OS7Tile.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OS7Tile.h; sourceTree = "<group>"; };
+		80DB366A13AAF80300605710 /* OS7Tile.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OS7Tile.m; sourceTree = "<group>"; };
+		80DB366B13AAF80F00605710 /* Makefile */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.make; path = Makefile; sourceTree = "<group>"; };
+		80DB366C13AAF80F00605710 /* ReadMe.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = ReadMe.txt; sourceTree = "<group>"; };
+		80DB366D13AAF80F00605710 /* Tweak.xm */ = {isa = PBXFileReference; lastKnownFileType = text; path = Tweak.xm; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		80DB366E13AAF81500605710 /* _DreamBoardTheme */ = {isa = PBXFileReference; lastKnownFileType = folder; path = _DreamBoardTheme; sourceTree = "<group>"; };
+		80DB366F13AAF81500605710 /* _Library */ = {isa = PBXFileReference; lastKnownFileType = folder; path = _Library; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		80DB365513AAF7BF00605710 = {
+			isa = PBXGroup;
+			children = (
+				80DB366113AAF7DE00605710 /* Classes */,
+				80DB366313AAF7E400605710 /* Resources */,
+			);
+			sourceTree = "<group>";
+		};
+		80DB366113AAF7DE00605710 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				80DB366613AAF80300605710 /* DreamBoard.h */,
+				80DB366713AAF80300605710 /* OS7.h */,
+				80DB366813AAF80300605710 /* OS7.m */,
+				80DB366413AAF80300605710 /* OS7ListApp.h */,
+				80DB366513AAF80300605710 /* OS7ListApp.m */,
+				80DB366913AAF80300605710 /* OS7Tile.h */,
+				80DB366A13AAF80300605710 /* OS7Tile.m */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		80DB366313AAF7E400605710 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				80DB366E13AAF81500605710 /* _DreamBoardTheme */,
+				80DB366F13AAF81500605710 /* _Library */,
+				80DB366B13AAF80F00605710 /* Makefile */,
+				80DB366C13AAF80F00605710 /* ReadMe.txt */,
+				80DB366D13AAF80F00605710 /* Tweak.xm */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXProject section */
+		80DB365713AAF7BF00605710 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				ORGANIZATIONNAME = Wynd;
+			};
+			buildConfigurationList = 80DB365A13AAF7BF00605710 /* Build configuration list for PBXProject "OS7" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 80DB365513AAF7BF00605710;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+			);
+		};
+/* End PBXProject section */
+
+/* Begin XCBuildConfiguration section */
+		80DB365C13AAF7BF00605710 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Debug;
+		};
+		80DB365D13AAF7BF00605710 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		80DB365A13AAF7BF00605710 /* Build configuration list for PBXProject "OS7" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				80DB365C13AAF7BF00605710 /* Debug */,
+				80DB365D13AAF7BF00605710 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 80DB365713AAF7BF00605710 /* Project object */;
+}
