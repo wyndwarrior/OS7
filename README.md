@@ -4,13 +4,13 @@ OS7 is an immersive Windows Phone 7 based theme for Dreamboard on iOS.
 
 
 Features
-=========
+---------
 - Customizable start menu
 - Live tiles with html widgets
 - Hassle-free installation through DreamBoard
 
 Building
-============
+----------
 Requires Xcode and Xcode Command Line Tools.
 
 ```sh
@@ -21,6 +21,6 @@ make
 ```
 
 License
-=======
+--------
 
 Copyright 2014 Yu Xuan Liu. All rights reserved. Content licensed under the [GNU General Public License v3.0](LICENSE)
