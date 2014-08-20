@@ -1,11 +1,3 @@
-/*
- 
- OS7, Windows Phone 7 Theme
- 
- Wyndwarrior, 2011. Designed for DreamBoard
- 
- */
-
 #import "OS7Tile.h"
 
 @implementation OS7Tile
@@ -120,7 +112,6 @@
 }
 
 - (void)didHold:(UILongPressGestureRecognizer *)sender { 
-    NSLog(@"Recieved Hold:%d", sender.state);
     if (sender.state == 1)[[OS7 sharedInstance] didHold:self];
 }
 
@@ -130,7 +121,8 @@
 }
 
 -(void)updateBadge{
-    int num = (int)[[[[OS7 sharedInstance] applications] objectAtIndex:appIndex] badgeValue];
+    SBIcon *icon = [[[OS7 sharedInstance] applications] objectAtIndex:appIndex];
+    int num = (int)[icon badgeValue];
 	if(num == 0 && !badgeLabel) return;
 	if(!badgeLabel){
         NSDictionary *dict = [[NSDictionary alloc] initWithContentsOfFile:[NSString stringWithFormat:@"/var/mobile/Library/OS7/Tiles/%@/Info.plist", leafIdentifier]];

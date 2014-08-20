@@ -1,15 +1,9 @@
-/*
- 
- OS7, Windows Phone 7 Theme
- 
- Wyndwarrior, 2011. Designed for DreamBoard
- 
- */
-
-#import <SpringBoard/SpringBoard.h>
 #import "OS7Tile.h"
 #import "OS7ListApp.h"
 #import "DreamBoard.h"
+#import <objc/runtime.h>
+
+#define DREAMBOARD objc_getClass("DreamBoard")
 
 @interface OS7 : NSObject <UIActionSheetDelegate, UIScrollViewDelegate>
 {

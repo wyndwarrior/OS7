@@ -1,11 +1,3 @@
-/*
- 
- OS7, Windows Phone 7 Theme
- 
- Wyndwarrior, 2011. Designed for DreamBoard
- 
- */
-
 #import "OS7.h"
 
 @implementation OS7
@@ -24,7 +16,7 @@ static OS7* sharedInstance;
     sharedInstance = self;
     if(self)
     {
-        [[objc_getClass("DreamBoard") sharedInstance] hideAllExcept:nil];
+        [[DREAMBOARD sharedInstance] hideAllExcept:nil];
         window =            _window;
         applications =      _apps;
         
@@ -105,6 +97,8 @@ static OS7* sharedInstance;
             [info release];
         }
         
+        bool end = false;
+        
         //find our tile, if it's there
         for (id app in tileScrollView.subviews)
             if([app isKindOfClass:[OS7Tile class]] && [[app leafIdentifier] isEqualToString:bundleId]){
@@ -120,32 +114,31 @@ static OS7* sharedInstance;
                 if(isLarge)j+=2;
                 else j++;
                 
-                goto end;
-            }
-        
-        //we didn't find our tile, so let's add it.
-        OS7Tile *tile = nil;
-        
-        //find the corresponding SBApplication
-        for(int i = 0; i<(int)applications.count; i++)
-            if([[[applications objectAtIndex:i] leafIdentifier] isEqualToString:bundleId]){
-                if(isLarge && j%2!=0)j++;
-                tile = [[OS7Tile alloc] initWithFrame:CGRectMake(j%2==0?13:136,123*(j/2)+75,isLarge?238:115,115) appIndex:i];
+                //TODO: stop using goto
+                end = true;
                 break;
             }
         
-        if(!tile)continue;
-        
-        [tileScrollView addSubview:tile];
-        [tile release];
-        
-        if(isLarge)j+=2;
-        else j++;
-        
-    end:
-        // this is here so that the compiler doesn't yell at me for
-        // having a label at the end
-        j = j;
+        if( !end ){
+            //we didn't find our tile, so let's add it.
+            OS7Tile *tile = nil;
+            
+            //find the corresponding SBApplication
+            for(int i = 0; i<(int)applications.count; i++)
+                if([[[applications objectAtIndex:i] leafIdentifier] isEqualToString:bundleId]){
+                    if(isLarge && j%2!=0)j++;
+                    tile = [[OS7Tile alloc] initWithFrame:CGRectMake(j%2==0?13:136,123*(j/2)+75,isLarge?238:115,115) appIndex:i];
+                    break;
+                }
+            
+            if(!tile)continue;
+            
+            [tileScrollView addSubview:tile];
+            [tile release];
+            
+            if(isLarge)j+=2;
+            else j++;
+        }
     }
     [tileScrollView setContentSize:CGSizeMake(320, 123*((j+1)/2)+75)];
 }
@@ -156,7 +149,7 @@ static OS7* sharedInstance;
 	[appList release];
 	[mainView removeFromSuperview];
 	[mainView release];
-    [[objc_getClass("DreamBoard") sharedInstance] showAllExcept:nil];
+    [[DREAMBOARD sharedInstance] showAllExcept:nil];
 	[super dealloc];
 }
 
@@ -166,7 +159,7 @@ static OS7* sharedInstance;
 }
 
 -(void)toggle{
-    [[objc_getClass("DreamBoard") sharedInstance] hideAllExcept:mainView];
+    [[DREAMBOARD sharedInstance] hideAllExcept:mainView];
     [UIView beginAnimations:nil context:nil];
     [UIView setAnimationDuration:.5];
     if(toggled){

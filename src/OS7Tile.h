@@ -1,12 +1,6 @@
-/*
- 
- OS7, Windows Phone 7 Theme
- 
- Wyndwarrior, 2011. Designed for DreamBoard
- 
- */
-
 #import "OS7.h"
+#import "Headers/UIWebDocumentView.h"
+#import "Headers/SBApplicationIcon.h"
 
 @interface OS7Tile : UIView
 {
