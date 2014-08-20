@@ -1,5 +1,6 @@
 export ARCHS = armv7 arm64 armv7s
 export SOURCE = src
+export THEOS = theos
 export TARGET_IPHONEOS_DEPLOYMENT_VERSION = 5.0
 
 include $(THEOS)/makefiles/common.mk
