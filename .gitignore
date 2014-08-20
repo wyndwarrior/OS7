@@ -1,4 +1,4 @@
 *.o
 /obj
 .DS_Store
-*.xcworkspace
+/*.xcworkspace/
