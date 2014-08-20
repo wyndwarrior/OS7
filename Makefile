@@ -1,8 +1,13 @@
-include /framework/makefiles/common.mk
+export ARCHS = armv7 arm64 armv7s
+export SOURCE = src
+export TARGET_IPHONEOS_DEPLOYMENT_VERSION = 5.0
+
+include $(THEOS)/makefiles/common.mk
 
 TWEAK_NAME = OS7
-OS7_FILES = Tweak.xm
-OS7_FRAMEWORKS = Foundation UIKit CoreGraphics QuartzCore
-OS7_OBJC_FILES = OS7Tile.m OS7ListApp.m OS7.m
+OS7_FILES = $(SOURCE)/Tweak.xm
+OS7_FRAMEWORKS = Foundation UIKit CoreGraphics
+OS7_OBJC_FILES = $(SOURCE)/OS7Tile.m $(SOURCE)/OS7ListApp.m $(SOURCE)/OS7.m
 
-include /framework/makefiles/tweak.mk
+include $(THEOS)/makefiles/tweak.mk
+
